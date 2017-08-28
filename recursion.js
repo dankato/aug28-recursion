@@ -95,3 +95,51 @@ console.log(
 console.log(
   triangularNumber(45)
 );
+
+// Exercise 5 - String Splitter
+
+// Split a string based upon a separator (similar to String.prototype.split).
+
+// 1. what is the input to the program: string, separator
+// 2. what is the output of the program: array
+// 3. what is the input to each recursive calls: string, separator
+// 4. what is the output of each recursive calls: array
+
+
+// indexOf
+// index + seperator.length
+
+function split(string, separator){
+  let index = string.indexOf(separator);
+  if(index === -1) {
+    return [string];
+  }
+
+  return [ string.slice(0, index), ...split(string.slice(index + separator.length), separator) ]
+}
+
+/** 
+ * first iteration
+ * str = 'elias'
+ * expect = ['el', 'as']
+ * 
+ * idx = 2
+ * return ['el', ...split(string.slice(3), separator) ]
+ * return [ 'el', ...split('as', separator)]
+ * return ['el', split('as', 'l')]
+ *
+ *
+ * second iteration:
+ * str = 'as'
+ * idx = -1
+ *
+ * return [as]
+ *
+ * ['el', 'as']
+ */
+
+console.log(
+  split('8/30/2001', '/')
+)
+
+

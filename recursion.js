@@ -1,3 +1,5 @@
+// https://gist.github.com/tparveen/edddf988ec68ef6bb74cff9d1284d09d 
+
 // Exercise 1 - Counting Sheep
 // 1. what is the input to the program: number
 // 2. what is the output of the program: string
@@ -107,7 +109,7 @@ function triangularNumber(num) {
 
 // Split a string based upon a separator (similar to String.prototype.split).
 
-<<<<<<< HEAD
+
 console.log(
   triangularNumber(45)
 );
@@ -164,4 +166,26 @@ console.log(
 // 2. what is the output of the program: 
 // 3. what is the input to each recursive calls: 
 // 4. what is the output of each recursive calls: 
->>>>>>> a258e2ccfdd12b5dba82e94ee0c71958b557b440
+
+
+// Exercise 6 - Binary Representation
+
+function binary(number){
+    if(number >= 1){
+        return binary(Math.floor(number/2))+(number % 2);
+    } 
+    return '';
+}
+
+binary(25)
+// 11001
+
+
+// Math.floor
+// The Math.floor(x) function returns the largest integer less than or equal to a number "x".
+
+
+// 25/2 = 12.5
+// 25%2 = 0.5
+
+// 1010

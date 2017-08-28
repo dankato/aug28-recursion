@@ -62,6 +62,14 @@ function reverseString(string) {
   }
   // recursion case
   return string.slice(-1) + reverseString(string.split(string.slice(-1))[0]);
+
+  // optimizations possible:
+  // "string".split('g') =>   ["strin", ""];  [0]
+  // string[string.length - 1];
+  // string.slice(0, string.length - 1)
+  
+  // or do it from the front
+  // return reverseString(string.slice(1)) + string[0];
 }
 
 // reverseString('string');
@@ -77,21 +85,29 @@ function reverseString(string) {
 
 function triangularNumber(num) {
   // base case
-  if (num === 0) {
-    return num;
-  }
+  if (num === 0) return num;
+
   // recursive case
   return num + triangularNumber(num - 1);
 }
 
-console.log(
-  triangularNumber(3)
-);
+// console.log(
+//   triangularNumber(3)
+// );
 
-console.log(
-  triangularNumber(9)
-);
+// console.log(
+//   triangularNumber(9)
+// );
 
-console.log(
-  triangularNumber(45)
-);
+// console.log(
+//   triangularNumber(45)
+// );
+
+// Exercise 5 - String Splitter
+
+// Split a string based upon a separator (similar to String.prototype.split).
+
+// 1. what is the input to the program: 
+// 2. what is the output of the program: 
+// 3. what is the input to each recursive calls: 
+// 4. what is the output of each recursive calls: 

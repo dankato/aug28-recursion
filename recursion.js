@@ -15,17 +15,42 @@ function countSheep(num) {
 	countSheep(newNum);
 }
 
+// countSheep(3);
 
-countSheep(3);
+// Exercise 2 - Array Double
 
+// Write a program that takes an array as input which contains an unknown set of numbers, and output an array which doubles the values of each item in that array. Test your solution by trying a handful of different arrays.
 
+// 1. what is the input to the program: array
+// 2. what is the output of the program: array
+// 3. what is the input to each recursive calls: array
+// 4. what is the output of each recursive calls: array
 
+function arrayDoubler(arr) {
+  // base case
+  if (!arr.length) {
+    return [];
+  }
 
+  // recursive case
+  const doubledValue = arr[0] * 2;
 
+  return [doubledValue, ...arrayDoubler(arr.slice(1))];
+}
 
+console.log(
+  arrayDoubler([1,2,3])
+);
 
-// Array Double
-// 1. what is the input to the program
-// 2. what is the output of the program
-// 3. what is the input to each recursive calls
-// 4. what is the output of each recursive calls
+console.log(
+  arrayDoubler([0,-2,45, 6.7])
+);
+
+// Exercise 3 - Reverse String
+
+// Write a program that reverses a string. Take a string as input, reverse the string, and return the new string.
+
+// 1. what is the input to the program: 
+// 2. what is the output of the program: 
+// 3. what is the input to each recursive calls: 
+// 4. what is the output of each recursive calls: 

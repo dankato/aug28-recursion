@@ -38,13 +38,13 @@ function arrayDoubler(arr) {
   return [doubledValue, ...arrayDoubler(arr.slice(1))];
 }
 
-console.log(
-  arrayDoubler([1,2,3])
-);
+// console.log(
+//   arrayDoubler([1,2,3])
+// );
 
-console.log(
-  arrayDoubler([0,-2,45, 6.7])
-);
+// console.log(
+//   arrayDoubler([0,-2,45, 6.7])
+// );
 
 // Exercise 3 - Reverse String
 
@@ -64,15 +64,34 @@ function reverseString(string) {
   return string.slice(-1) + reverseString(string.split(string.slice(-1))[0]);
 }
 
-reverseString('string');
-
+// reverseString('string');
 
 // Exercise 4 - nth Triangular Number
 
 // Calculates the nth triangular number. A triangular number counts the objects that can form an equilateral triangle. The nth triangular number is the number of dots composing a triangle with n dots on a side, and is equal to the sum of the n natural numbers from 1 to n. This is the Triangular Number Sequence: 1, 3, 6, 10, 15, 21, 28, 36, 45
 
-// 1. what is the input to the program: 
-// 2. what is the output of the program: 
-// 3. what is the input to each recursive calls: 
-// 4. what is the output of each recursive calls: 
+// 1. what is the input to the program: number
+// 2. what is the output of the program: number
+// 3. what is the input to each recursive calls: number
+// 4. what is the output of each recursive calls: number
 
+function triangularNumber(num) {
+  // base case
+  if (num === 0) {
+    return num;
+  }
+  // recursive case
+  return num + triangularNumber(num - 1);
+}
+
+console.log(
+  triangularNumber(3)
+);
+
+console.log(
+  triangularNumber(9)
+);
+
+console.log(
+  triangularNumber(45)
+);
